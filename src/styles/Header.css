@@ -1,0 +1,22 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+    background-color: lime;
+    color: darkgreen;
+    border-radius: 20px;
+}
+
+.appTitle{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ml-5{
+    margin-right: 10px;
+    font-weight: 200;
+}

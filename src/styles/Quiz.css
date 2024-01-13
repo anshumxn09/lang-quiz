@@ -1,0 +1,11 @@
+.quizContainer{
+    padding: 10px 2px;
+}
+
+.radioControls{
+    margin-top: 20px;
+}
+
+.radioControls > input {
+    margin-right: 5px;
+}

@@ -1,4 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("../src/styles/Header.css");
+@import url("../src/styles/Home.css");
+@import url("../src/styles/Learning.css");
+@import url("../src/styles/Quiz.css");
+
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app{
+  padding: 10px;
+}
+
+.fs-20{
+  font-size: 20px;
+}
+
+.color-dg{
+  color: darkgreen;
 }

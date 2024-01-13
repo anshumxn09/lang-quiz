@@ -1,0 +1,35 @@
+.homeContainer{
+    padding: 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcomeMsg{
+    letter-spacing: 2px;
+    color: darkgreen;
+}
+
+.randomMsg{
+    color: darkgreen;
+    text-align: center;
+}
+
+.languagesBlock{
+    padding: 10px 0px;
+}
+
+.lang{
+    width: 290px;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: lime;
+    color: darkgreen;
+    text-transform: uppercase;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
