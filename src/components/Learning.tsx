@@ -2,10 +2,10 @@ import { FaArrowLeft } from "react-icons/fa";
 import { GrLanguage } from "react-icons/gr";
 import { FaVolumeUp } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
-
 import '../styles/Learning.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { fetchAllWords } from "../utils/fetch.words";
 
 const Learning = () => {
   const navigate = useNavigate();
@@ -28,6 +28,12 @@ const Learning = () => {
 
     setCount((prev) => prev + 1);
   }
+  
+  useEffect(() => {
+    fetchAllWords("hi").then(() => {
+      console.log("worked");
+    })
+  }, []);
   
   return (
     <div className="learningContainer">
