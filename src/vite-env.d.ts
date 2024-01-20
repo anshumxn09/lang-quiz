@@ -12,3 +12,9 @@ interface StateType {
     words : WordType[];
     error?: string;
 }
+
+interface FetchWordsType {
+    translations : {
+        text : string
+    }[]
+}
