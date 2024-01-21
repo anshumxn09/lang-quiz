@@ -18,3 +18,5 @@ interface FetchWordsType {
         text : string
     }[]
 }
+
+type LangType = "ja" | "hi" | "fr" | "sp";
