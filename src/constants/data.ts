@@ -5,14 +5,14 @@ interface LanguagesType {
 
 export const languages:LanguagesType[] = [{
     name : "Hindi",
-    code : "hn"
+    code : "hi"
 }, {
     name : "Japanese",
-    code : "jp"
+    code : "ja"
 }, {
     name : "French",
     code : "fr"
 }, {
     name : "Spanish",
-    code : "sh"
+    code : "es"
 }]
