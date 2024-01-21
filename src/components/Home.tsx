@@ -15,8 +15,8 @@ const Home = () => {
 
         <div className="languagesBlock">
           {
-            languages.map((lang) => {
-              return <div>
+            languages.map((lang, i) => {
+              return <div key={i} >
                 <button style={{
                   cursor : "pointer"
                 }} onClick={() => languagesHandler(lang.code)} key={lang.code} className="lang">
