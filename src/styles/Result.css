@@ -1,9 +1,9 @@
-.resultContainer{
+.resultContainer, .statsColor{
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .resultBlock{
@@ -13,3 +13,44 @@
     align-items: center;
     flex-direction: row;
 }
+
+.words > h4, .results > h4{
+    background: lime;
+    border-radius: 20px;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.highlight{
+    margin: 10px 0px;
+}
+
+.correct{
+    width: 3px;
+    height: 3px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: darkgreen;
+    color: darkgreen;
+}
+
+.wrong{
+    width: 3px;
+    height: 3px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: red;
+    color: red;
+}
+
+.notSelected{
+    width: 3px;
+    height: 3px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: yellow;
+    color: yellow;
+}
+
+.red{color: red;}
+.green{color: green;}
