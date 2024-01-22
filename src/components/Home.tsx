@@ -3,12 +3,18 @@ import { GiBirdClaw } from "react-icons/gi";
 import './../styles/Home.css';
 import { languages } from "../constants/data";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Home = () => {
   const navigate = useNavigate()
   const languagesHandler = (lang : string):void => {
     navigate(`/learning?lang=${lang}`)
   }
+
+  useEffect(() => {
+    localStorage.removeItem("result-loading");
+    localStorage.removeItem("loading");
+  }, [])
   return (
     <div className="homeContainer">
         <p style={{fontSize : "17px", fontWeight : "bold"}} className="welcomeMsg">Welcome To Learningo <GiBirdClaw  style={{fontSize : "25px", marginBottom : "-8px"}}  /></p>
