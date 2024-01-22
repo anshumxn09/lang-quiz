@@ -2,6 +2,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Loader from './components/Loader';
 import Header from './components/Header';
+import NotFound from './components/NotFound';
 const Home = lazy(() => import("./components/Home"));
 const Learning = lazy(() => import("./components/Learning"));
 const Quiz = lazy(() => import("./components/Quiz"));
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/learning' element={<Learning/>}></Route>
         <Route path='/quiz' element={<Quiz/>}></Route>
         <Route path='/result' element={<Result/>}></Route>
+        <Route path='/*' element={<NotFound/>}></Route>
       </Routes>
       </Suspense>
       </div>
