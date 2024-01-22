@@ -2,16 +2,18 @@ import { Watch } from "react-loader-spinner";
 
 const Loader = () => {
   return (
-    <Watch
+    <div className="loaderContainer">
+      <Watch
   visible={true}
   height="80"
   width="80"
   radius="48"
-  color="purple"
+  color="lime"
   ariaLabel="watch-loading"
   wrapperStyle={{}}
   wrapperClass=""
   />
+    </div>
   )
 }
 
