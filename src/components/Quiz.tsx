@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import '../styles/Quiz.css';
 import { useEffect, useState } from 'react';
@@ -14,20 +13,20 @@ const Quiz = () => {
   const dispatch = useDispatch();
 
   const nextHandler = () => {
-    if(count === 7){
-      navigate("/result");
-    }
+    const radioVal = document.getElementById(`radio-${radioAns}`)! as HTMLInputElement;
 
-    setResults((val) => [...val, radioAns]);
-    setCount((val) => val + 1);
+    setResults((prev) => [...prev, radioAns === "" ? "Not Selected" : radioAns]);
+    setCount((prev) => prev + 1);
     setAnswer("");
 
-    console.log(result);
+    if(radioVal) radioVal.checked = false;
+
   }
 
   useEffect(() => {
+    if (count + 1 > words.length) navigate("/result");
     dispatch(SaveResult(result));
-  }, [dispatch, result]);
+  }, [result]);
 
   if(!words || words.length === 0) navigate("/");
 
@@ -42,10 +41,10 @@ const Quiz = () => {
 
       <div className="radioControls">
       {
-        words[count].options.map((i) => {
+        count < words.length && words[count].options.map((i) => {
           return (
             <>
-              <input type="radio" name="radio" value={i} onChange={(e) => setAnswer(e.target.value)} />
+              <input type="radio" id={`radio-${i}`} name={"radio"} value={i} onChange={(e) => setAnswer(e.target.value)} />
               <span style={{
                 fontSize : "20px"
               }} className='color-dg'>{i}</span> <br />
