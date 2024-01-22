@@ -27,11 +27,13 @@ const Result = () => {
   }, [words, results]);
 
   useEffect(() => {
-    const val = localStorage.getItem("loading");
+    const val = localStorage.getItem("result-loadding");
+    console.log(val);
+
     if(!val){
-      localStorage.setItem("loading", "1");
+      localStorage.setItem("result-loadding", "1");
     }else{
-      localStorage.removeItem("loading");
+      localStorage.removeItem("result-loadding");
       navigate("/");
     }
   }, [navigate]);
