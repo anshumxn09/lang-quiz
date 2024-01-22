@@ -37,25 +37,23 @@ const Learning = () => {
 
   useEffect(() => {
     dispatch(GetAllWordsLoading());
-    
-    // let wrongParams:string;
-
     if(params)
-
-    console.log(typeof params);
-
     fetchAllWords(params).then((arr) => {
-      console.log(arr);
       dispatch(GetAllWordsSuccess(arr));
     }).catch((err) => {
-      console.log(err);
       dispatch(GetAllWordsError(err));
     })
   }, [dispatch, params]);
   
-  // useEffect(() => {
-  //   if(error) 
-  // },[error])
+  useEffect(() => {
+    const val = localStorage.getItem("loading");
+    if(!val){
+      localStorage.setItem("loading", "1");
+    }else{
+      localStorage.removeItem("loading");
+      navigate("/");
+    }
+  }, [navigate]);
 
   if(loading) return <Loader/>
 
