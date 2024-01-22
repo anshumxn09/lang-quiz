@@ -42,13 +42,9 @@ export const fetchAllWords = async (params: LangType):Promise<WordType[]> => {
             options
         }
     })
-
-    console.log(actualData);
-    
     return actualData;
 
   } catch (error) {
-    console.log(error);
     throw new Error("Some error")
   }
 };
