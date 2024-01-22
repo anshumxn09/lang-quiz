@@ -26,3 +26,14 @@
 input[type='radio'] {
   accent-color: darkgreen;
 }
+
+.bold{
+  font-weight: bold;
+}
+
+.loaderContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
